@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <h1>Ice Cream Shoppe</h1>
+        <form>
+            <fieldset>
+                <legend>Customer: </legend>
+                <div class="row">
+                    <div>
+                        <label for="firstname">First</label>
+                        <input id="firstname" name="first_name" type="text">
+                    </div>
+                    <div>
+                        <label for="lastname">Last</label>
+                        <input id="lastname" name="last_name" type="text">
+                    </div>
+                </div>
+            </fieldset>
+            <div class="row">
+                <div>
+                    <fieldset>
+                        <legend>Flavor:</legend>
+                        <div>
+                            <input type="radio" id="vanilla" name="ice cream">
+                            <label for="vanilla">Vanilla</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="strawberry" name="ice cream">
+                            <label for="strawberry">Strawberry</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="chocolate" name="ice cream">
+                            <label for="chocolate">Chocolate</label>
+                        </div>
+                    </fieldset>
+                </div>
+                <div id="Size" class="row">
+                    <fieldset>
+                        <legend>Size:</legend>
+                        <div>
+                            <input type="radio" id="small" name="size">
+                            <label for="small">Small</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="medium" name="size">
+                            <label for="medium">Medium</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="large" name="size">
+                            <label for="large">Large</label>
+                        </div>
+                    </fieldset>
+                </div>
+                <div id="topping" class="row">
+                    <fieldset>
+                        <legend>Toppings:</legend>
+                        <div>
+                            <input type="checkbox" id="sprinkles" name="sprinkles" value="sprinkles">
+                            <label for="sprinkles">Sprinkles</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="whippedCream" name="whippedCream" value="whippedCream">
+                            <label for="whippedCream">Whipped Cream</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="caramel" name="caramel" value="caramel">
+                            <label for="caramel">Caramel</label>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+            <div id="containerType">
+                <fieldset>
+                    <legend>Cup or Cone:</legend>
+                    <label for="container">Please Choose One</label>
+                    <select name="container" id="container">
+                        <option value="cup">Plastic Cup</option>
+                        <option value="sugar">Sugar Cone</option>
+                        <option value="waffle">Waffle Cone</option>
+                        <option value="dippedWaffle">Chocolate Dipped Waffle Cone</option>
+                    </select>
+                </fieldset>
+            </div>
+            <div id="requests">
+                <fieldset>
+                    <legend>Special:</legend>
+                    <label for="SpecialRequests">Special Requests:</label>
+                    <textarea id="SpecialRequests" name="SpecialRequests" rows="4" cols="30"
+                              placeholder="Allergic to peanuts, substitutions, etc."></textarea>
+                </fieldset>
+            </div>
+            <button type="button" onclick="alert('Free today for Our Grand Opening!')">Calculate Cost</button>
+            <button type="submit">Submit Order</button>
+        </form>
+    </div>
+    <div class="content pizza">
+        <form>
+            <h1>You and Ted's</h1>
+
+            <section class="boxes">
+                <label for="boxes">How many boxes of pizza would you like? (Max 4 per order)</label>
+                <input type="number" name="boxes" id="boxes" max="4">
+            </section>
+            <hr>
+
+            <section class="time">
+                <label for="time">How much time at most would you allow us? </label>
+                <br>
+                <span>Instant</span>
+                <input type="range" name="time" id="time" value="5" min="1" max="9">
+                <span>As long as you'd like</span>
+            </section>
+            <hr>
+
+            <section class="toppings">
+                <span>What toppings would you like?</span>
+                <br>
+                <input type="checkbox" name="topping" id="pepperoni" value="pepperoni">
+                <label for="pepperoni">Pepperoni</label>
+                <input type="checkbox" name="topping" id="bacon" value="bacon">
+                <label for="bacon">Bacon</label>
+                <input type="checkbox" name="topping" id="cheese" value="cheese">
+                <label for="cheese">Extra Cheese</label>
+            </section>
+
+            <hr>
+
+            <section class="crust">
+                <span>Would you like a thin, thick, or cheese-filled thick crust?</span>
+                <br>
+                <input type="radio" name="crust" id="thin" value="thin">
+                <label for="thin">Thin</label>
+                <input type="radio" name="crust" id="thick" value="thick">
+                <label for="thick">Thick</label>
+                <input type="radio" name="crust" id="filledThick" value="filledThick">
+                <label for="filledThick">Cheese-filled Thick</label>
+            </section>
+            <hr>
+
+            <section class="sauce-type">
+                <label for="sauce">What type of sauce would you prefer us to use?</label>
+                <select name="sauce" id="sauce">
+                    <option value="Tomato">Tomato</option>
+                    <option value="Pesto">Pesto</option>
+                    <option value="pretzel">Pretzel</option>
+                    <option value="white garlic">White Garlic</option>
+                </select>
+            </section>
+            <hr>
+
+            <section class="drink-selection">
+                <label for="drink">We also offer a free drink per order, what would you like?</label>
+                <input list="drinks" id="drink" name="drink">
+                <datalist id="drinks">
+                    <option value="Dr. Pepper"></option>
+                    <option value="Coca-Cola"></option>
+                    <option value="Pepsi"></option>
+                </datalist>
+            </section>
+            <hr>
+            <section class="extra-info">
+                <label for="extra">Anything else for your pizza?</label>
+                <br>
+                <textarea id="extra" name="extra" rows="3" cols="40"></textarea>
+            </section>
+            <hr>
+
+            <section class="submission">
+                <button type="button" onclick="alert('Free today for Our Grand Opening!')">Calculate Cost</button>
+                <button type="submit">Submit Order</button>
+            </section>
+        </form>
+    </div>
+</div>
+</body>
+</html>
